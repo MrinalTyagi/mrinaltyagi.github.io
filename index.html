@@ -21,7 +21,7 @@
     <!-- AOS Animate on Scroll (jsDelivr — reliable on GitHub Pages) -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css">
 
-    <!-- Custom Styles — root-relative so assets always resolve from site root -->
+    <!-- Custom Styles (same folder as index.html — works locally and on GitHub Pages root) -->
     <link rel="stylesheet" href="styles.css">
 </head>
 
@@ -548,11 +548,11 @@
         </div>
     </footer>
 
-    <!-- Scripts — order matters; failures are handled in script.js -->
-    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js" defer></script>
-    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js" defer></script>
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.16/dist/typed.umd.js" defer></script>
-    <script src="script.js" defer></script>
+    <!-- Scripts: no defer — runs in order after DOM is parsed; avoids DOMContentLoaded races on GitHub Pages -->
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>
