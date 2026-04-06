@@ -1,180 +1,558 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mrinal Tyagi - Academic Portfolio</title>
+    <title>Mrinal Tyagi | Machine Learning Scientist</title>
+    <meta name="description"
+        content="Portfolio of Mrinal Tyagi — Associate Machine Learning Scientist, MS (Research) in AI at IIT Delhi. Published at MICCAI, ISBI, Elsevier Q1 Journal.">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- AOS Animate on Scroll -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+
+    <!-- Custom Styles -->
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
+
 <body>
-    <!-- Navigation Bar -->
-    <nav>
-        <div class="container">
-            <h1>Mrinal Tyagi</h1>
-            <ul>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#skills">Skills</a></li>
+
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo">MT</a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#about">About</a></li>
                 <li><a href="#experience">Experience</a></li>
                 <li><a href="#publications">Publications</a></li>
-                <li><a href="#projects">Projects</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#skills">Skills</a></li>
                 <li><a href="#open-source">Open Source</a></li>
-                <li><a href="#extra-activities">Extra Activities</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
     </nav>
 
-    <!-- Main Content -->
-    <main>
-        <!-- Contact Information -->
-        <section id="contact">
-            <div class="container">
-                <div class="contact-info">
-                    <h2>Contact Information</h2>
-                    <p>Email: <a href="mailto:mrinaltyagi24@gmail.com">mrinaltyagi24@gmail.com</a></p>
-                    <p>LinkedIn: <a href="https://www.linkedin.com/in/mrinal-tyagi-02a1351b1/" target="_blank">Mrinal Tyagi</a></p>
-                    <p>Medium: <a href="https://mrinaltyagi24.medium.com/" target="_blank">mrinaltyagi24</a></p>
-                    <p>GitHub: <a href="https://github.com/MrinalTyagi" target="_blank">MrinalTyagi</a></p>
+    <!-- Hero Section -->
+    <section id="hero">
+        <div id="particles-js"></div>
+        <div class="hero-content">
+            <p class="hero-greeting" data-aos="fade-down" data-aos-delay="200">Hello, I'm</p>
+            <h1 class="hero-name" data-aos="fade-up" data-aos-delay="400">Mrinal Tyagi</h1>
+            <div class="hero-typed-wrapper" data-aos="fade-up" data-aos-delay="600">
+                <span id="typed-output"></span>
+            </div>
+            <div class="hero-cta" data-aos="fade-up" data-aos-delay="800">
+                <a href="#publications" class="btn btn-primary"><i class="fas fa-file-alt"></i> View Publications</a>
+                <a href="#contact" class="btn btn-outline"><i class="fas fa-envelope"></i> Get in Touch</a>
+            </div>
+            <a href="#about" class="scroll-down" aria-label="Scroll down">
+                <i class="fas fa-chevron-down"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">About Me</h2>
+            <div class="about-hero" data-aos="fade-up" data-aos-delay="100">
+                <div class="about-hero-left">
+                    <div class="about-avatar">
+                        <img src="image.jpeg" alt="Mrinal Tyagi" class="avatar-photo">
+                    </div>
+                    <div class="about-quick-links">
+                        <a href="https://scholar.google.com/citations?user=uYkU_REAAAAJ" target="_blank"><i class="fas fa-graduation-cap"></i> Google Scholar</a>
+                        <a href="https://github.com/MrinalTyagi" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                        <a href="https://www.linkedin.com/in/mrinal-tyagi-02a1351b1/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                    </div>
+                </div>
+                <div class="about-hero-right">
+                    <p class="about-lead">I build ML systems that ship&mdash;from research papers to production APIs.</p>
+                    <p class="about-body">Currently an <strong>Associate Machine Learning Scientist at Wadhwani AI</strong>, I work on multi-agent conversational AI and LLM serving for real-world agricultural applications. Previously, as a <strong>Project Scientist at IIT Delhi</strong>, I developed surgical video analysis systems deployed at AIIMS Delhi and published at top-tier venues.</p>
+                    <p class="about-body">My research sits at the intersection of <strong>computer vision</strong> and <strong>medical imaging</strong>&mdash;most recently on 3D Gaussian Splatting for diagnostic imaging (oral at ISBI 2026) and temporal augmentation for surgical video segmentation (oral at MICCAI 2024). I&rsquo;m pursuing an <strong>MS (Research) in AI at IIT Delhi</strong> part-time, alongside my full-time role.</p>
+                    <div class="about-interests">
+                        <h4><i class="fas fa-flask"></i> Current Research Interests</h4>
+                        <div class="interest-tags">
+                            <span>Radiology Report Generation</span>
+                            <span>VLMs for Healthcare</span>
+                            <span>3D Gaussian Splatting</span>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </section>
-
-        <!-- Education Section -->
-        <section id="education">
-            <div class="container">
-                <h2>Education</h2>
-                <ul>
-                    <li><strong>Master of Science in Research (CSE)</strong><br>
-                        IIT Delhi, New Delhi, India (2024 - Present)
-                    </li>
-                    <li><strong>Bachelor of Technology (ECE)</strong><br>
-                        Bharati Vidyapeeth’s College of Engineering, New Delhi, India (2019 - 2023) - GPA: 8.41
-                    </li>
-                </ul>
-            </div>
-        </section>
-
-        <!-- Skills Section -->
-        <section id="skills">
-            <div class="container">
-                <h2>Skills Summary</h2>
-                <p><strong>Languages:</strong> C, C++, Python, Swift, MySQL</p>
-                <p><strong>Tools:</strong> Git, XCode, Jupyter Notebook, VSCode, Sublime, AWS</p>
-                <p><strong>Libraries/Frameworks:</strong> PyTorch, Tensorflow, Plotly, Scikit Learn, OpenCV, Pandas, PyQt5, MongoDB, Flask</p>
-                <p><strong>Key Concepts:</strong> Problem Solving, Data Structures & Algorithms, Statistics, Probability, Linear Algebra, Operating System</p>
-            </div>
-        </section>
-
-        <!-- Experience Section -->
-        <section id="experience">
-            <div class="container">
-                <h2>Experience</h2>
-                <div class="experience-item">
-                    <h3>Project Scientist</h3>
-                    <p><em>IIT Delhi, New Delhi, India (Feb 2024 - Present)</em></p>
-                    <p>Working on video instance segmentation for surgical videos.</p>
-                    <p><strong>Advised by:</strong> Prof. Chetan Arora<br>
-                    <strong>Co-advised by:</strong> Prof. Prem Kumar Kalra</p>
+            <div class="about-divider"></div>
+            <div class="about-highlights" data-aos="fade-up" data-aos-delay="300">
+                <div class="highlight-card">
+                    <div class="highlight-icon"><i class="fas fa-rocket"></i></div>
+                    <div class="highlight-text">
+                        <strong>Research &rarr; Production</strong>
+                        <span>Optimized LLM inference from 20s to 5s; containerized and deployed scalable ML APIs with Docker on cloud infrastructure.</span>
+                    </div>
                 </div>
-                <div class="experience-item">
-                    <h3>Jr. Project Assistant</h3>
-                    <p><em>IIT Delhi, New Delhi, India (Nov 2023 - Feb 2023)</em></p>
-                    <p>Developed a new flow consistent augmentation technique for temporal action segmentation, accepted at MICCAI 2024.</p>
-                    <p><strong>Advised by:</strong> Rohan Raju Dhanakshirur, Prof. Chetan Arora<br>
-                    <strong>Co-advised by:</strong> Prof. Prem Kumar Kalra</p>
+                <div class="highlight-card">
+                    <div class="highlight-icon"><i class="fas fa-award"></i></div>
+                    <div class="highlight-text">
+                        <strong>Published &amp; Presented</strong>
+                        <span>Oral presentations at ISBI 2026 (London) and MICCAI 2024. Papers in Elsevier Q1 Journal, ACM, and IEEE venues.</span>
+                    </div>
                 </div>
-                <div class="experience-item">
-                    <h3>Research Intern</h3>
-                    <p><em>IIT Delhi, New Delhi, India (April 2023 - Oct 2023)</em></p>
-                    <p>Developed suturing evaluation software for medical institutes.</p>
-                </div>
-                <div class="experience-item">
-                    <h3>SDE Intern</h3>
-                    <p><em>Zomato, Gurugram, India (Jan 2022 - July 2022)</em></p>
-                    <p>Worked on the Dining Module for iOS, enhancing UX and SEO features, resulting in a 4.8% increase in revenue.</p>
-                </div>
-                <div class="experience-item">
-                    <h3>Data Science Intern</h3>
-                    <p><em>Innomatics Research Labs, Remote (April 2021 - July 2021)</em></p>
-                    <p>Worked on statistical modeling, hypothesis testing, and a music recommendation system.</p>
+                <div class="highlight-card">
+                    <div class="highlight-icon"><i class="fas fa-heartbeat"></i></div>
+                    <div class="highlight-text">
+                        <strong>Clinical Impact</strong>
+                        <span>Built surgical instrument segmentation and suturing assessment systems deployed at AIIMS Delhi, India&rsquo;s premier medical institute.</span>
+                    </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Publications Section -->
-        <section id="publications">
-            <div class="container">
-                <h2>Publications and Conferences</h2>
-                <ul>
-                    <li><strong>Custom Weighted Balanced Loss Function for COVID-19 Detection from an Imbalanced Dataset</strong><br>
-                        26th International Conference on Pattern Recognition, Montreal, Canada<br>
-                        <a href="https://ieeexplore.ieee.org/document/9956580" target="_blank">Manuscript</a> | <a href="https://github.com/MrinalTyagi/CWBCCE-COVID19" target="_blank">GitHub</a>
-                    </li>
-                    <li><strong>SVD-CLAHE Boosting and Balanced Loss Function for COVID-19 Detection from an Imbalanced Chest X-Ray Dataset</strong><br>
-                        Computers in Biology and Medicine (Elsevier Q1)<br>
-                        <a href="https://www.sciencedirect.com/science/article/pii/S0010482522008009" target="_blank">Manuscript</a> | <a href="https://github.com/MrinalTyagi/SVD-CLAHE-and-BWCCE" target="_blank">GitHub</a>
-                    </li>
-                    <li><strong>A Transformer-based Approach for Abuse Detection in Code Mixed Indic Languages</strong><br>
-                        ACM Transactions on Asian and Low Resource Language Information Processing<br>
-                        <a href="https://dl.acm.org/doi/abs/10.1145/3571818" target="_blank">Manuscript</a>
-                    </li>
-                </ul>
-            </div>
-        </section>
+    <!-- Experience Section -->
+    <section id="experience">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Professional Experience</h2>
+            <div class="timeline">
 
-        <!-- Projects Section -->
-        <section id="projects">
-            <div class="container">
-                <h2>Projects</h2>
-                <ul>
-                    <li><strong>COVID-19 Vaccine Prioritizer using Clustering</strong> - <a href="https://github.com/MrinalTyagi/EY-Hackathon" target="_blank">GitHub</a><br>
-                        Developed a data-driven tool using KMeans clustering to prioritize COVID-19 vaccine distribution across Indian districts.
-                    </li>
-                    <li><strong>Neural Network from Scratch in Swift</strong> - <a href="https://github.com/MrinalTyagi/WWDC-2021-Swift-Challenge-Submission" target="_blank">GitHub</a><br>
-                        An interactive playground for beginners explaining neural networks using Swift.
-                    </li>
-                    <li><strong>Other Projects</strong><br>
-                        Employed HAAR Cascade, Single Shot Detector (SSD), and Segmentation models on multiple datasets.
-                    </li>
-                </ul>
-            </div>
-        </section>
+                <div class="timeline-item" data-aos="fade-right">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card">
+                        <span class="timeline-date">Jun 2025 &mdash; Present</span>
+                        <h3>Associate Machine Learning Scientist</h3>
+                        <h4><i class="fas fa-building"></i> Wadhwani AI &middot; New Delhi</h4>
+                        <ul>
+                            <li>Engineered a multi-agent conversational AI system for agricultural applications,
+                                enhancing context-aware dialogue and user engagement in real-world scenarios.</li>
+                            <li>Optimized Retrieval-Augmented Generation (RAG) pipelines with large language models,
+                                significantly improving response accuracy and minimizing hallucinations.</li>
+                            <li>Developed end-to-end ML systems for LLM serving, achieving a reduction in inference
+                                latency from 20s to 5s through model optimization and efficient inference strategies.
+                            </li>
+                            <li>Containerized and deployed scalable machine learning APIs using Docker, ensuring
+                                reproducible environments and reliable production-grade deployments.</li>
+                        </ul>
+                    </div>
+                </div>
 
-        <!-- Open Source Section -->
-        <section id="open-source">
-            <div class="container">
-                <h2>Open Source Contributions</h2>
-                <ul>
-                    <li><strong>TensorFlow:</strong> Added a new hyperparameter beta in the swish activation function.</li>
-                    <li><strong>Scikit-Learn:</strong> Code cleanup for various sections including GridSearchCV, HalvingSearchCV, and other test fixes.</li>
-                    <li><strong>Hugging Face:</strong> Code optimization in forward pass of inference.</li>
-                    <li><strong>Keras CV:</strong> Documentation cleanup and addition of YOLOv7 in the applications section.</li>
-                </ul>
-            </div>
-        </section>
+                <div class="timeline-item" data-aos="fade-left">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card">
+                        <span class="timeline-date">Nov 2023 &mdash; Dec 2024</span>
+                        <h3>Project Scientist</h3>
+                        <h4><i class="fas fa-university"></i> IIT Delhi &middot; New Delhi</h4>
+                        <ul>
+                            <li>Developed PEFT-based instance segmentation models for surgical instrument detection,
+                                enhancing localization accuracy in complex surgical environments.</li>
+                            <li>Built an automated suturing quality assessment system, benchmarking state-of-the-art
+                                models for evaluating surgical actions.</li>
+                            <li>Designed a flow-consistent augmentation pipeline to enhance temporal action
+                                segmentation, improving modeling of surgical hand-eye coordination.</li>
+                            <li>Optimized and deployed deep learning models by converting PyTorch to TensorRT, achieving
+                                low-latency inference for real-world applications.</li>
+                            <li>Deployed systems at AIIMS Delhi, demonstrating significant clinical impact and
+                                scalability in a healthcare setting.</li>
+                        </ul>
+                    </div>
+                </div>
 
-        <!-- Extra Activities Section -->
-        <section id="extra-activities">
-            <div class="container">
-                <h2>Extra Activities</h2>
-                <ul>
-                    <li><strong>Kaggle Expert:</strong><br>
-                        Datasets Expert (Rank 71/71,194), Notebook Expert (Rank 264/238,257), Discussion Expert (Rank 500/308,227)
-                    </li>
-                    <li><strong>Medium Writer:</strong> Published articles on topics such as HOG (Histogram of Oriented Gradients), Viola Jones Algorithm, Image Segmentation, and more.</li>
-                </ul>
+                <div class="timeline-item" data-aos="fade-right">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card">
+                        <span class="timeline-date">Jan 2022 &mdash; Jul 2022</span>
+                        <h3>SDE Intern</h3>
+                        <h4><i class="fas fa-utensils"></i> Zomato &middot; Gurugram</h4>
+                        <ul>
+                            <li>Spearheaded development of an iOS Dining product delivering an end-to-end user
+                                experience: Stories module, seamless table reservations, and an integrated New Pay Cart;
+                                launched in Hyderabad and Delhi.</li>
+                            <li>Engineered an auto-suggest feature that increased revenue by 4.8% through improved
+                                suggestion click-through.</li>
+                            <li>Resolved visual bugs across the application, enhancing UI consistency and overall user
+                                experience.</li>
+                        </ul>
+                    </div>
+                </div>
+
             </div>
-        </section>
-    </main>
+        </div>
+    </section>
+
+    <!-- Publications Section -->
+    <section id="publications">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Publications &amp; Conferences</h2>
+            <div class="pub-grid">
+
+                <!-- FEATURED: ISBI 2026 -->
+                <div class="pub-card featured" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="pub-badge featured-badge"><i class="fas fa-star"></i> Oral Presentation &middot; ISBI
+                        2026</div>
+                    <h3>Robust and Efficient 3D Gaussian Splatting for Diagnostic Imaging</h3>
+                    <p class="pub-authors"><strong>Mrinal Tyagi</strong>, Ashish Suri, Chetan Arora</p>
+                    <p class="pub-venue"><i class="fas fa-map-marker-alt"></i> IEEE International Symposium on
+                        Biomedical Imaging (ISBI) 2026 &middot; London, UK</p>
+                    <p class="pub-abstract">3D Gaussian Splatting (3DGS) has emerged as a popular technique for neural
+                        rendering. Use of simple Gaussian primitives that enable real-time rendering, faster training,
+                        and high visual fidelity makes its use compelling over alternatives like NeRFs. However, despite
+                        its success in natural image settings, 3DGS encounters notable rendering challenges in medical
+                        imaging. Our analysis reveals that the error characteristics of sparse reconstruction pipelines
+                        (e.g., COLMAP), which serve input to the 3DGS pipeline, differ significantly between medical and
+                        natural environments. This discrepancy leads to degraded rendering performance when noise
+                        propagates from sparsely reconstructed inputs. To address this issue, we introduce a novel
+                        opacity-based regularization strategy for 3DGS that yields two key benefits: (1) enhanced
+                        rendering quality through suppression of noisy Gaussian components, and (2) substantial
+                        reduction in the number of Gaussian primitives required, improving rendering efficiency.
+                        Experiments on two medical datasets validate the effectiveness of our approach. On the C3VD
+                        dataset, our method achieves an average PSNR improvement of 0.42 dB and reduces the number of
+                        Gaussians by 14,137 per sequence. On the EndoMapper dataset, we observe an average PSNR gain of
+                        1.60 dB with a reduction of 91,522 Gaussians per sequence.</p>
+                    <div class="pub-links">
+                        <a class="coming-soon-link"><i class="fas fa-file-pdf"></i> Manuscript</a>
+                        <a href="https://aih-iitd.github.io/publications/robust3dgs" target="_blank"><i class="fas fa-globe"></i> Project Page</a>
+                        <a href="https://github.com/AiH-IITD/Robust3DGS" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                    </div>
+                </div>
+
+                <!-- VideoCutMix -->
+                <div class="pub-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="pub-badge oral-badge"><i class="fas fa-microphone"></i> Oral Presentation &middot;
+                        MICCAI 2024</div>
+                    <h3>VideoCutMix: Temporal Segmentation of Surgical Videos in Scarce Data Scenarios</h3>
+                    <p class="pub-authors">Rohan Raju Dhanakshirur, <strong>Mrinal Tyagi</strong>, Britty Baby, Ashish
+                        Suri, Prem Kalra, Chetan Arora</p>
+                    <p class="pub-venue"><i class="fas fa-map-marker-alt"></i> Medical Image Computing and Computer
+                        Assisted Intervention (MICCAI) 2024</p>
+                    <p class="pub-abstract">We propose a simple-yet-efficient, flow-consistent, video-specific data
+                        augmentation technique for Temporal Action Segmentation (TAS) in scarce surgical data
+                        conditions. TAS errors commonly occur at action boundaries due to their scarcity; our novel
+                        strategy generates pseudo-action boundaries without disturbing optical flow. We also contribute
+                        the first non-robotic Neuro-endoscopic Trainee Simulator (NETS) dataset and a
+                        sample-hardness-inspired curriculum. On average across 9 SOTA models, the proposed technique
+                        outperforms the best-performing SOTA augmentation by 3.94%.</p>
+                    <div class="pub-links">
+                        <a href="https://papers.miccai.org/miccai-2024/paper/3401_paper.pdf" target="_blank"><i class="fas fa-file-pdf"></i> Manuscript</a>
+                        <a href="https://aineurosurgery.github.io/VideoCutMix" target="_blank"><i class="fas fa-globe"></i> Project Page</a>
+                        <a href="https://github.com/AINeurosurgery/VideoCutMix/tree/master" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                    </div>
+                </div>
+
+                <!-- COVID-19 CWBCE -->
+                <div class="pub-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="pub-badge poster-badge"><i class="fas fa-image"></i> Poster</div>
+                    <h3>Custom Weighted Balanced Loss Function for COVID-19 Detection from an Imbalanced Dataset</h3>
+                    <p class="pub-authors"><strong>Mrinal Tyagi</strong>, Santanu Roy, Vibhuti Bansal</p>
+                    <p class="pub-venue"><i class="fas fa-map-marker-alt"></i> 26th International Conference on Pattern
+                        Recognition (ICPR) &middot; Montreal, Canada</p>
+                    <p class="pub-abstract">We propose a novel framework using ResNet-18 with a Custom Weighted Balanced
+                        loss function to detect COVID-19 from highly imbalanced Chest X-Ray datasets. By modifying bias
+                        weights in Weighted Categorical Cross Entropy, we jointly reduce class imbalance and intra-class
+                        variance in the COVID class. Our approach achieves 96% accuracy, 97% precision, 96% recall, 97%
+                        F1 score, and 97% AUC&mdash;a 3&ndash;4% improvement over standard cross-entropy baselines.</p>
+                    <div class="pub-links">
+                        <a href="https://ieeexplore.ieee.org/document/9956580" target="_blank"><i
+                                class="fas fa-file-pdf"></i> Manuscript</a>
+                        <a href="https://github.com/MrinalTyagi/CWBCCE-COVID19" target="_blank"><i
+                                class="fab fa-github"></i> GitHub</a>
+                    </div>
+                </div>
+
+                <!-- SVD-CLAHE -->
+                <div class="pub-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="pub-badge journal-badge"><i class="fas fa-journal-whills"></i> Elsevier Q1 Journal</div>
+                    <h3>SVD-CLAHE Boosting and Balanced Loss Function for COVID-19 Detection from an Imbalanced Chest
+                        X-Ray Dataset</h3>
+                    <p class="pub-authors">Santanu Roy, <strong>Mrinal Tyagi</strong>, Vibhuti Bansal, Vikas Jain</p>
+                    <p class="pub-venue"><i class="fas fa-book"></i> Computers in Biology and Medicine (Elsevier)</p>
+                    <p class="pub-abstract">We propose SVD-CLAHE Boosting, a novel data-augmentation technique combining
+                        SVD-based contrast enhancement with CLAHE for oversampling and Random Under Sampling for
+                        balancing, alongside a Balanced Weighted Categorical Cross Entropy (BWCCE) loss function.
+                        ResNet-50 trained on the augmented dataset with BWCCE achieves 95% F1, 94% accuracy, 95% recall,
+                        96% precision, and 96% AUC&mdash;outperforming InceptionV3, DenseNet-121, Xception, Covid-Lite,
+                        and Covid-Net.</p>
+                    <div class="pub-links">
+                        <a href="https://www.sciencedirect.com/science/article/pii/S0010482522008009" target="_blank"><i
+                                class="fas fa-file-pdf"></i> Manuscript</a>
+                        <a href="https://github.com/MrinalTyagi/SVD-CLAHE-and-BWCCE" target="_blank"><i
+                                class="fab fa-github"></i> GitHub</a>
+                    </div>
+                </div>
+
+                <!-- Transformer Abuse Detection -->
+                <div class="pub-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="pub-badge journal-badge"><i class="fas fa-journal-whills"></i> ACM Journal</div>
+                    <h3>A Transformer-based Approach for Abuse Detection in Code Mixed Indic Languages</h3>
+                    <p class="pub-authors">Vibhuti Bansal, <strong>Mrinal Tyagi</strong>, Rajesh Sharma, Vedika Gupta,
+                        Qin Xin</p>
+                    <p class="pub-venue"><i class="fas fa-book"></i> ACM Transactions on Asian and Low-Resource Language
+                        Information Processing</p>
+                    <p class="pub-abstract">We explore abuse detection across 13 Indic code-mixed languages, comparing
+                        classical ML baselines with transformer architectures including XLM-RoBERTa, indic-BERT, MuRIL,
+                        and mBERT. A multilingual preprocessing pipeline handles transliteration, stop-word removal, and
+                        emoji extraction. XLM-RoBERTa with BiGRU, enhanced with emoji embeddings, achieves the best
+                        performance. A combined model trained on all 13 languages attains an F1 score of 0.88 and AUC of
+                        0.94.</p>
+                    <div class="pub-links">
+                        <a href="https://dl.acm.org/doi/abs/10.1145/3571818" target="_blank"><i
+                                class="fas fa-file-pdf"></i> Manuscript</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Education</h2>
+            <div class="edu-grid">
+                <div class="edu-card" data-aos="fade-right" data-aos-delay="200">
+                    <div class="edu-icon"><i class="fas fa-graduation-cap"></i></div>
+                    <h3>MS (Research) in AI</h3>
+                    <h4>IIT Delhi</h4>
+                    <p>New Delhi, India</p>
+                </div>
+                <div class="edu-card" data-aos="fade-left" data-aos-delay="300">
+                    <div class="edu-icon"><i class="fas fa-graduation-cap"></i></div>
+                    <h3>B.Tech in ECE</h3>
+                    <h4>Bharati Vidyapeeth's College of Engineering</h4>
+                    <p>Delhi, India &middot; Aug 2019 &mdash; Aug 2023</p>
+                    <p class="edu-gpa">GPA: 8.41</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Areas of Expertise</h2>
+            <p class="skills-subtitle" data-aos="fade-up" data-aos-delay="50">Building intelligent systems from research
+                to production&mdash;spanning language, vision, and beyond.</p>
+            <div class="skills-showcase">
+
+                <div class="skill-pillar" data-aos="fade-up" data-aos-delay="100">
+                    <div class="skill-pillar-icon"><i class="fas fa-brain"></i></div>
+                    <h3>Machine Intelligence</h3>
+                    <p>End-to-end ML pipelines, from model architecture design and RLHF alignment to production
+                        deployment and A/B experimentation at scale.</p>
+                    <div class="skill-tags">
+                        <span>Deep Learning</span>
+                        <span>AI Agents</span>
+                        <span>RLHF</span>
+                        <span>A/B Testing</span>
+                        <span>Model Optimization</span>
+                    </div>
+                </div>
+
+                <div class="skill-pillar" data-aos="fade-up" data-aos-delay="200">
+                    <div class="skill-pillar-icon"><i class="fas fa-comments"></i></div>
+                    <h3>Language &amp; Dialogue</h3>
+                    <p>Large language model serving, retrieval-augmented generation, and multi-agent conversational
+                        systems for domain-specific applications.</p>
+                    <div class="skill-tags">
+                        <span>LLMs</span>
+                        <span>RAG</span>
+                        <span>NLP</span>
+                        <span>Transformers</span>
+                        <span>Multilingual</span>
+                    </div>
+                </div>
+
+                <div class="skill-pillar" data-aos="fade-up" data-aos-delay="300">
+                    <div class="skill-pillar-icon"><i class="fas fa-eye"></i></div>
+                    <h3>Visual Understanding</h3>
+                    <p>Medical imaging, 3D reconstruction, surgical video analysis, and instance segmentation&mdash;with
+                        deployments at premier clinical institutions.</p>
+                    <div class="skill-tags">
+                        <span>Computer Vision</span>
+                        <span>Medical Imaging</span>
+                        <span>3D Gaussian Splatting</span>
+                        <span>Segmentation</span>
+                    </div>
+                </div>
+
+                <div class="skill-pillar" data-aos="fade-up" data-aos-delay="400">
+                    <div class="skill-pillar-icon"><i class="fas fa-code"></i></div>
+                    <h3>Engineering Stack</h3>
+                    <p>Production-grade systems in Python and C++, containerized with Docker, optimized with TensorRT,
+                        and served on cloud infrastructure.</p>
+                    <div class="skill-tags">
+                        <span>Python</span>
+                        <span>C++</span>
+                        <span>SQL</span>
+                        <span>Docker</span>
+                        <span>AWS</span>
+                        <span>Git</span>
+                    </div>
+                </div>
+
+                <div class="skill-pillar" data-aos="fade-up" data-aos-delay="500">
+                    <div class="skill-pillar-icon"><i class="fas fa-layer-group"></i></div>
+                    <h3>Frameworks &amp; Libraries</h3>
+                    <p>Deep expertise across the modern ML ecosystem&mdash;from training to deployment&mdash;with
+                        contributions to several open-source projects.</p>
+                    <div class="skill-tags">
+                        <span>PyTorch</span>
+                        <span>TensorFlow</span>
+                        <span>TensorRT</span>
+                        <span>Hugging Face</span>
+                        <span>Scikit-Learn</span>
+                        <span>OpenCV</span>
+                        <span>Flask</span>
+                    </div>
+                </div>
+
+                <div class="skill-pillar" data-aos="fade-up" data-aos-delay="600">
+                    <div class="skill-pillar-icon"><i class="fas fa-lightbulb"></i></div>
+                    <h3>Research &amp; Strategy</h3>
+                    <p>Published researcher with a track record of translating novel ideas into impactful
+                        systems&mdash;bridging academia and industry.</p>
+                    <div class="skill-tags">
+                        <span>Research</span>
+                        <span>Problem Solving</span>
+                        <span>Algorithm Design</span>
+                        <span>Communication</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Open Source Section -->
+    <section id="open-source">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Open Source Contributions</h2>
+            <div class="oss-grid">
+
+                <div class="oss-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="oss-icon"><i class="fas fa-fire"></i></div>
+                    <h3>TensorFlow</h3>
+                    <p>Added a new hyperparameter <code>beta</code> in the swish activation function.</p>
+                </div>
+
+                <div class="oss-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="oss-icon"><i class="fas fa-chart-line"></i></div>
+                    <h3>Scikit-Learn</h3>
+                    <p>Code cleanup for GridSearchCV, HalvingSearchCV, and other test fixes.</p>
+                </div>
+
+                <div class="oss-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="oss-icon"><i class="fas fa-robot"></i></div>
+                    <h3>Hugging Face</h3>
+                    <p>Code optimization in the forward pass of inference.</p>
+                </div>
+
+                <div class="oss-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="oss-icon"><i class="fas fa-shapes"></i></div>
+                    <h3>Keras CV</h3>
+                    <p>Documentation cleanup and addition of YOLOv7 in the applications section.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Extra Activities Section -->
+    <section id="extra-activities">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Extra Activities</h2>
+            <div class="activities-grid">
+
+                <div class="activity-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="activity-icon"><i class="fab fa-kaggle"></i></div>
+                    <h3>Kaggle Expert</h3>
+                    <div class="activity-badges">
+                        <span class="badge">Datasets Expert <small>Rank 71 / 71,194</small></span>
+                        <span class="badge">Notebook Expert <small>Rank 264 / 238,257</small></span>
+                        <span class="badge">Discussion Expert <small>Rank 500 / 308,227</small></span>
+                    </div>
+                </div>
+
+                <div class="activity-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="activity-icon"><i class="fab fa-medium"></i></div>
+                    <h3>Medium Writer</h3>
+                    <p>Published articles on HOG (Histogram of Oriented Gradients), Viola Jones Algorithm, Image
+                        Segmentation, and more.</p>
+                    <a href="https://mrinaltyagi24.medium.com/" target="_blank" class="project-link"><i
+                            class="fab fa-medium"></i> Read on Medium</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Get in Touch</h2>
+            <p class="contact-subtitle" data-aos="fade-up" data-aos-delay="100">Feel free to reach out for
+                collaborations, research discussions, or opportunities.</p>
+            <div class="contact-grid" data-aos="fade-up" data-aos-delay="200">
+                <a href="mailto:mrinaltyagi24@gmail.com" class="contact-card">
+                    <i class="fas fa-envelope"></i>
+                    <span>mrinaltyagi24@gmail.com</span>
+                </a>
+                <a href="https://www.linkedin.com/in/mrinal-tyagi-02a1351b1/" target="_blank" class="contact-card">
+                    <i class="fab fa-linkedin"></i>
+                    <span>LinkedIn</span>
+                </a>
+                <a href="https://github.com/MrinalTyagi" target="_blank" class="contact-card">
+                    <i class="fab fa-github"></i>
+                    <span>GitHub</span>
+                </a>
+                <a href="https://mrinaltyagi24.medium.com/" target="_blank" class="contact-card">
+                    <i class="fab fa-medium"></i>
+                    <span>Medium</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Wave SVG Separator -->
+    <div class="wave-separator">
+        <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+            <path d="M0,40 C360,120 1080,0 1440,80 L1440,120 L0,120 Z" fill="#0a0f1a" />
+        </svg>
+    </div>
 
     <!-- Footer -->
     <footer>
         <div class="container">
-            <p>&copy; 2024 Mrinal Tyagi. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="mailto:mrinaltyagi24@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                <a href="https://www.linkedin.com/in/mrinal-tyagi-02a1351b1/" target="_blank" aria-label="LinkedIn"><i
+                        class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/MrinalTyagi" target="_blank" aria-label="GitHub"><i
+                        class="fab fa-github"></i></a>
+                <a href="https://mrinaltyagi24.medium.com/" target="_blank" aria-label="Medium"><i
+                        class="fab fa-medium"></i></a>
+            </div>
+            <p>&copy; 2026 Mrinal Tyagi. All rights reserved.</p>
         </div>
     </footer>
 
-    <script src="scripts.js"></script>
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script src="script.js"></script>
 </body>
+
 </html>
