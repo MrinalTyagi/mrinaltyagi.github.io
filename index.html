@@ -18,10 +18,10 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-    <!-- AOS Animate on Scroll -->
-    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    <!-- AOS Animate on Scroll (jsDelivr — reliable on GitHub Pages) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css">
 
-    <!-- Custom Styles -->
+    <!-- Custom Styles — root-relative so assets always resolve from site root -->
     <link rel="stylesheet" href="styles.css">
 </head>
 
@@ -74,7 +74,7 @@
             <div class="about-hero" data-aos="fade-up" data-aos-delay="100">
                 <div class="about-hero-left">
                     <div class="about-avatar">
-                        <img src="image.jpeg" alt="Mrinal Tyagi" class="avatar-photo">
+                        <img src="image.jpeg" alt="Mrinal Tyagi" class="avatar-photo" width="170" height="170" loading="lazy">
                     </div>
                     <div class="about-quick-links">
                         <a href="https://scholar.google.com/citations?user=uYkU_REAAAAJ" target="_blank"><i class="fas fa-graduation-cap"></i> Google Scholar</a>
@@ -548,11 +548,11 @@
         </div>
     </footer>
 
-    <!-- Scripts -->
-    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.16/dist/typed.umd.js"></script>
-    <script src="script.js"></script>
+    <!-- Scripts — order matters; failures are handled in script.js -->
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.16/dist/typed.umd.js" defer></script>
+    <script src="script.js" defer></script>
 </body>
 
 </html>
